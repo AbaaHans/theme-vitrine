@@ -18,17 +18,72 @@ header{
     text-align: center;
 }
 
-header nav a{
+header #logo, .toggle{
+    position: absolute;
+    font-size: 15pt;
+    font-weight: bold;
+}
+
+header #logo a{
+    color: #fff;
     padding: 10px 25px;
+    text-transform:uppercase;
+
+
+}
+
+header nav ul li{
+    display: inline-block;
     color: #fff;
     text-transform:uppercase;
 }
+header nav ul li a{
+    color:#fff;
+    padding: 10px 25px;
+
+}
 header nav .active,
-header nav a:hover{
+header nav ul li a:hover{
   background: #fff;
   color: #008080;
   transition: 0.75s;
 }
+
+.toggle{
+    padding: 10px 25px;
+    color: #fff;
+    right: 50px;
+    font-size: 20pt;
+    display: none;
+    
+}
+
+@media all and (max-width:991px){
+    .toggle{
+        display: block;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+    .ouvrir{
+        display: block;
+    }
+    .fermer{
+        display: none;
+    }
+    .open .fermer{
+        display: block;
+    }
+    header nav ul li{
+        position:absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        background-color:#008080;
+       
+    }
+}
+
 
 
 section{
@@ -45,3 +100,97 @@ section{
 section:nth-child(odd){
     background: #d9d9d9;
 }
+
+
+
+/* responsive */
+
+@-ms-viewport {
+    width: device-width;
+}
+
+@media screen and (max-width: 480px) {
+
+    html, body {
+        min-width: 320px;
+    }
+
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body *, body *:before, body *:after {
+        -moz-animation: none !important;
+        -webkit-animation: none !important;
+        -ms-animation: none !important;
+        animation: none !important;
+        -moz-transition: none !important;
+        -webkit-transition: none !important;
+        -ms-transition: none !important;
+        transition: none !important;
+ }
+
+/* Type */
+
+html {
+    font-size: 16pt;
+}
+
+    @media screen and (max-width: 1680px) {
+
+        html {
+            font-size: 12pt;
+        }
+
+    }
+
+    @media screen and (max-width: 736px) {
+
+        html {
+            font-size: 11pt;
+            scroll-behavior: smooth;
+        }
+
+    }
+
+    @media screen and (max-width: 360px) {
+
+        html {
+            font-size: 10pt;
+              scroll-behavior: smooth;
+        }
+
+    }
+/* 
+    responsive section  */
+
+    @media screen and (max-width: 1680px) {
+
+        section {
+            font-size: 7rem;
+            scroll-behavior: smooth;
+        }
+    }
+    
+    @media screen and (max-width: 736px) {
+
+        section {
+            font-size: 5rem;
+            scroll-behavior: smooth;
+        }
+    }
+
+    @media screen and (max-width: 360px) {
+
+        section {
+            font-size: 3rem;
+              scroll-behavior: smooth;
+        }
+
+    }

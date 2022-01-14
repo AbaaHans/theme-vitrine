@@ -1,5 +1,5 @@
 let section = document.querySelectorAll('section');
-let navLink  = document.querySelectorAll('header nav a');
+let navLink  = document.querySelectorAll(' header nav ul li a');
 
 window.onscroll = () =>{
     section.forEach(sec => {
@@ -10,8 +10,18 @@ window.onscroll = () =>{
         if(top >= offset && top < offset + height){
             navLink.forEach(links =>{
                 links.classList.remove('active');
-                document.querySelector('header nav a[href*='+ id +']').classList.add('active');
+                document.querySelector(' header nav ul li a[href*='+ id +']').classList.add('active');
             });
         };
     });
 };
+
+
+let toggle = document.querySelector('.toggle');
+let body  = document.querySelector('body');
+
+toggle.addEventListener('click', function(){
+    body.classList.toggle('open');
+
+
+});
